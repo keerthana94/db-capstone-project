@@ -18,7 +18,7 @@ USE `LittleLemonAnalysis` ;
 -- Table `LittleLemonAnalysis`.`Staff`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `LittleLemonAnalysis`.`Staff` (
-  `StaffID` INT NOT NULL AUTO_INCREMENT,
+  `StaffID` INT NOT NULL,
   `Role` VARCHAR(255) NOT NULL,
   `Salary` DECIMAL NOT NULL,
   PRIMARY KEY (`StaffID`))
@@ -29,7 +29,7 @@ ENGINE = InnoDB;
 -- Table `LittleLemonAnalysis`.`Customer`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `LittleLemonAnalysis`.`Customer` (
-  `CustomerID` INT NOT NULL AUTO_INCREMENT,
+  `CustomerID` INT NOT NULL,
   `GuestFirstName` VARCHAR(255) NOT NULL,
   `GuestLastName` VARCHAR(255) NOT NULL,
   `Contact` VARCHAR(255) NOT NULL,
@@ -41,7 +41,7 @@ ENGINE = InnoDB;
 -- Table `LittleLemonAnalysis`.`Bookings`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `LittleLemonAnalysis`.`Bookings` (
-  `BookingID` INT NOT NULL AUTO_INCREMENT,
+  `BookingID` INT NOT NULL,
   `BookingDate` DATE NOT NULL,
   `TableNumber` INT NOT NULL,
   `BookingSlot` TIME NOT NULL,
@@ -67,7 +67,7 @@ ENGINE = InnoDB;
 -- Table `LittleLemonAnalysis`.`Menu`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `LittleLemonAnalysis`.`Menu` (
-  `MenuID` INT NOT NULL AUTO_INCREMENT,
+  `MenuID` INT NOT NULL,
   `Name` VARCHAR(255) NOT NULL,
   `Cuisine` VARCHAR(255) NOT NULL,
   `Type` VARCHAR(45) NOT NULL,
@@ -80,7 +80,7 @@ ENGINE = InnoDB;
 -- Table `LittleLemonAnalysis`.`Orders`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `LittleLemonAnalysis`.`Orders` (
-  `OrderID` INT NOT NULL AUTO_INCREMENT,
+  `OrderID` INT NOT NULL,
   `OrderDate` DATE NOT NULL,
   `Quantity` INT NOT NULL,
   `TotalCost` DECIMAL NOT NULL,
